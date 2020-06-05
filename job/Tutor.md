@@ -20,3 +20,9 @@ Relations :
     - One to many    [ user - posts ]   Foreginkey
     - Many to many   [ user - groups ]  
     - One to one  [ user - profile ]
+
+
+
+
+static files : [frontend] images , css , javascript 
+media files : [upload] images
