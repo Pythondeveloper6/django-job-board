@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text">
-                        <h3>4536+ Jobs Available</h3>
+                        <h3>{{jobs.count}}+ Jobs Available</h3>
                     </div>
                 </div>
             </div>
@@ -124,20 +124,21 @@
 
                     <div class="job_lists m-0">
                         <div class="row">
+                           {% for job in jobs %}
                             <div class="col-lg-12 col-md-12">
                                 <div class="single_jobs white-bg d-flex justify-content-between">
                                     <div class="jobs_left d-flex align-items-center">
                                         <div class="thumb">
-                                            <img src="img/svg_icon/1.svg" alt="">
+                                            <img src="" alt="">
                                         </div>
                                         <div class="jobs_conetent">
-                                            <a href="job_details.html"><h4>Software Engineer</h4></a>
+                                            <a href="{% url 'jobs:job_detail' job.id %}"><h4>{{job}}</h4></a>
                                             <div class="links_locat d-flex align-items-center">
                                                 <div class="location">
                                                     <p> <i class="fa fa-map-marker"></i> California, USA</p>
                                                 </div>
                                                 <div class="location">
-                                                    <p> <i class="fa fa-clock-o"></i> Part-time</p>
+                                                    <p> <i class="fa fa-clock-o"></i> {{job.job_type}}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -145,160 +146,15 @@
                                     <div class="jobs_right">
                                         <div class="apply_now">
                                             <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                            <a href="{% url 'jobs:job_detail' job.id %}" class="boxed-btn3">Apply Now</a>
                                         </div>
                                         <div class="date">
-                                            <p>Date line: 31 Jan 2020</p>
+                                            <p>Date line: {{job.published_at|date:'d M o'}}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-12 col-md-12">
-                                <div class="single_jobs white-bg d-flex justify-content-between">
-                                    <div class="jobs_left d-flex align-items-center">
-                                        <div class="thumb">
-                                            <img src="img/svg_icon/2.svg" alt="">
-                                        </div>
-                                        <div class="jobs_conetent">
-                                            <a href="job_details.html"><h4>Digital Marketer</h4></a>
-                                            <div class="links_locat d-flex align-items-center">
-                                                <div class="location">
-                                                    <p> <i class="fa fa-map-marker"></i> California, USA</p>
-                                                </div>
-                                                <div class="location">
-                                                    <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="jobs_right">
-                                        <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
-                                        </div>
-                                        <div class="date">
-                                            <p>Date line: 31 Jan 2020</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12">
-                                <div class="single_jobs white-bg d-flex justify-content-between">
-                                    <div class="jobs_left d-flex align-items-center">
-                                        <div class="thumb">
-                                            <img src="img/svg_icon/3.svg" alt="">
-                                        </div>
-                                        <div class="jobs_conetent">
-                                            <a href="job_details.html"><h4>Wordpress Developer</h4></a>
-                                            <div class="links_locat d-flex align-items-center">
-                                                <div class="location">
-                                                    <p> <i class="fa fa-map-marker"></i> California, USA</p>
-                                                </div>
-                                                <div class="location">
-                                                    <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="jobs_right">
-                                        <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
-                                        </div>
-                                        <div class="date">
-                                            <p>Date line: 31 Jan 2020</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12">
-                                <div class="single_jobs white-bg d-flex justify-content-between">
-                                    <div class="jobs_left d-flex align-items-center">
-                                        <div class="thumb">
-                                            <img src="img/svg_icon/4.svg" alt="">
-                                        </div>
-                                        <div class="jobs_conetent">
-                                            <a href="job_details.html"><h4>Visual Designer</h4></a>
-                                            
-                                            <div class="links_locat d-flex align-items-center">
-                                                <div class="location">
-                                                    <p> <i class="fa fa-map-marker"></i> California, USA</p>
-                                                </div>
-                                                <div class="location">
-                                                    <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="jobs_right">
-                                        <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
-                                        </div>
-                                        <div class="date">
-                                            <p>Date line: 31 Jan 2020</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12">
-                                <div class="single_jobs white-bg d-flex justify-content-between">
-                                    <div class="jobs_left d-flex align-items-center">
-                                        <div class="thumb">
-                                            <img src="img/svg_icon/5.svg" alt="">
-                                        </div>
-                                        <div class="jobs_conetent">
-                                            <a href="job_details.html"><h4>Software Engineer</h4></a>
-                                            <div class="links_locat d-flex align-items-center">
-                                                <div class="location">
-                                                    <p> <i class="fa fa-map-marker"></i> California, USA</p>
-                                                </div>
-                                                <div class="location">
-                                                    <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="jobs_right">
-                                        <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
-                                        </div>
-                                        <div class="date">
-                                            <p>Date line: 31 Jan 2020</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12">
-                                <div class="single_jobs white-bg d-flex justify-content-between">
-                                    <div class="jobs_left d-flex align-items-center">
-                                        <div class="thumb">
-                                            <img src="img/svg_icon/1.svg" alt="">
-                                        </div>
-                                        <div class="jobs_conetent">
-                                            <a href="job_details.html"><h4>Creative Designer</h4></a>
-                                            <div class="links_locat d-flex align-items-center">
-                                                <div class="location">
-                                                    <p> <i class="fa fa-map-marker"></i> California, USA</p>
-                                                </div>
-                                                <div class="location">
-                                                    <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="jobs_right">
-                                        <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
-                                        </div>
-                                        <div class="date">
-                                            <p>Date line: 31 Jan 2020</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
