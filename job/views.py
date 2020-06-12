@@ -22,7 +22,9 @@ def job_detail(request , slug):
     if request.method=='POST':
         form = ApplyForm(request.POST , request.FILES)
         if form.is_valid():
-            myform = form.save()
+            myform = form.save(commit=False)
+            myform.job = job_detail
+            myform.save()
             print('DOne')
 
     else:
