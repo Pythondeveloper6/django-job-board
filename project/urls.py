@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('jobs/', include('job.urls',namespace='jobs')),
     path('contact-us/', include('contact.urls',namespace='contact')),
+    path('api-auth/', include('rest_framework.urls')),
 ]
 
 urlpatterns +=  static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
