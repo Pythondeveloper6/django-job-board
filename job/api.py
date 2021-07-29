@@ -22,7 +22,7 @@ def job_detail_api(request,id):
 
 
 
-class JobListApi(generics.ListAPIView):
+class JobListApi(generics.ListCreateAPIView):
     queryset = Job.objects.all()
     serializer_class = JobSerializer
 
